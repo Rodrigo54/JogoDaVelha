@@ -24,10 +24,15 @@ void ZerarJogo(char vet[DIM][DIM])
 
 void MostraJogo(char vet[DIM][DIM])
 {
-  printf("%c | %c | %c \n", vet[0][0], vet[0][1], vet[0][2]);
-  printf("%c | %c | %c \n", vet[1][0], vet[1][1], vet[1][2]);
-  printf("%c | %c | %c \n", vet[2][0], vet[2][1], vet[2][2]);
-  printf("\n");
+  wprintf(L"\n\t┌─── JOGO DA VELHA ───┐");
+  wprintf(L"\n\t│                     │");
+  wprintf(L"\n\t│      %c │ %c │ %c      │", vet[0][0], vet[0][1], vet[0][2]);
+  wprintf(L"\n\t│     ───┼───┼───     │");
+  wprintf(L"\n\t│      %c │ %c │ %c      │", vet[1][0], vet[1][1], vet[1][2]);
+  wprintf(L"\n\t│     ───┼───┼───     │");
+  wprintf(L"\n\t│      %c │ %c │ %c      │", vet[2][0], vet[2][1], vet[2][2]);
+  wprintf(L"\n\t│                     │");
+  wprintf(L"\n\t└─────────────────────┘\n");
 }
 
 int ConfereDiagonal(char vet[DIM][DIM], char item)
@@ -95,7 +100,8 @@ int ConfereJogo(char vet[DIM][DIM], char item) {
 void InsereVelha(char vet[DIM][DIM], char item) {
   int linha, coluna;
 
-  printf("Digite a Linha e a Coluna da jogada:\n");
+  wprintf(L"\n\tDigite a Linha e a Coluna da jogada");
+  wprintf(L"\n\tUse espaço para separar os valores:\n\t");
   scanf("%d %d", &linha, &coluna);
   vet[linha - 1][coluna - 1] = item;
 }

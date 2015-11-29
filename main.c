@@ -13,6 +13,7 @@
 #include "JogoDaVelha.h"
 
 int main() {
+  _setmode(_fileno(stdout), UTF_8); //Define no console o conjunto UTF8 de caracteres
   system("title JOGO DA VELHA");
   system("color 0e");
   /*CORES 1=FUNDO 2=TEXTO
@@ -37,19 +38,22 @@ int main() {
     if(player == 0) jogada = 'X';
     else jogada = 'O';
 
+    wprintf(L"\n\tVez do jogador %d", player+1);
     InsereVelha(velha, jogada);
     system("clear || cls");
     MostraJogo(velha);
     GG = ConfereJogo(velha, jogada);
     if (GG == 1) {
-      printf("O jogador %d venceu!\n", player+1);
+      wprintf(L"\n\tO jogador %d venceu!\n\t", player+1);
+      getch();
       return 0;
     }
     cont++;
     jogs++;
   }while(jogs < 9);
   system("clear || cls");
-  printf("O jogo terminou em empate.\n");
   MostraJogo(velha);
+  wprintf(L"\n\tO jogo terminou em empate.\n\t");
+  getch();
   return 0;
 }

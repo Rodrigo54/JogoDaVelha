@@ -15,6 +15,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <conio.h>
+#include <wchar.h>  //Biblioteca para conjunto UTF8 de caracteres
+#include <io.h>     //Biblioteca para conjunto UTF8 de caracteres
+#include <fcntl.h>  //Biblioteca para conjunto UTF8 de caracteres
+#define UTF_8  0x40000
+
 #define DIM 3
 
 void ZerarJogo(char vet[DIM][DIM]);
