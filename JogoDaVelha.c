@@ -24,15 +24,22 @@ void ZerarJogo(char vet[DIM][DIM])
 
 void MostraJogo(char vet[DIM][DIM])
 {
-  wprintf(L"\n\t┌─── JOGO DA VELHA ───┐");
-  wprintf(L"\n\t│                     │");
-  wprintf(L"\n\t│      %c │ %c │ %c      │", vet[0][0], vet[0][1], vet[0][2]);
-  wprintf(L"\n\t│     ───┼───┼───     │");
-  wprintf(L"\n\t│      %c │ %c │ %c      │", vet[1][0], vet[1][1], vet[1][2]);
-  wprintf(L"\n\t│     ───┼───┼───     │");
-  wprintf(L"\n\t│      %c │ %c │ %c      │", vet[2][0], vet[2][1], vet[2][2]);
-  wprintf(L"\n\t│                     │");
-  wprintf(L"\n\t└─────────────────────┘\n");
+  wprintf(L"\n\t ██╗   ██╗███████╗██╗     ██╗  ██╗ █████╗ ");
+  wprintf(L"\n\t ██║   ██║██╔════╝██║     ██║  ██║██╔══██╗");
+  wprintf(L"\n\t ██║   ██║█████╗  ██║     ███████║███████║");
+  wprintf(L"\n\t ╚██╗ ██╔╝██╔══╝  ██║     ██╔══██║██╔══██║");
+  wprintf(L"\n\t  ╚████╔╝ ███████╗███████╗██║  ██║██║  ██║");
+  wprintf(L"\n\t   ╚═══╝  ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝");
+
+  wprintf(L"\n\n\t\t┌─── JOGO DA VELHA ───┐");
+  wprintf(L"\n\t\t│                     │");
+  wprintf(L"\n\t\t│      %c │ %c │ %c      │", vet[0][0], vet[0][1], vet[0][2]);
+  wprintf(L"\n\t\t│     ───┼───┼───     │");
+  wprintf(L"\n\t\t│      %c │ %c │ %c      │", vet[1][0], vet[1][1], vet[1][2]);
+  wprintf(L"\n\t\t│     ───┼───┼───     │");
+  wprintf(L"\n\t\t│      %c │ %c │ %c      │", vet[2][0], vet[2][1], vet[2][2]);
+  wprintf(L"\n\t\t│                     │");
+  wprintf(L"\n\t\t└─────────────────────┘\n");
 }
 
 int ConfereDiagonal(char vet[DIM][DIM], char item)
@@ -101,7 +108,14 @@ void InsereVelha(char vet[DIM][DIM], char item) {
   int linha, coluna;
 
   wprintf(L"\n\tDigite a Linha e a Coluna da jogada");
-  wprintf(L"\n\tUse espaço para separar os valores:\n\t");
+  wprintf(L"\n\tUse espaço para separar os valores: ");
   scanf("%d %d", &linha, &coluna);
-  vet[linha - 1][coluna - 1] = item;
+  if (vet[linha - 1][coluna - 1] != 'X' && vet[linha - 1][coluna - 1] != 'O')
+  {
+    vet[linha - 1][coluna - 1] = item;
+  }
+  else{
+    wprintf(L"\n\tEscolha outro lugar! ");
+    InsereVelha(vet,item);
+  }
 }

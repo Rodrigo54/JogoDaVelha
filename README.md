@@ -6,17 +6,7 @@ Jogo da Velha
 
 O Programa foi feito em **linguagem C** na IDE Code::Blocks
 
-```javascript
-  ┌─── JOGO DA VELHA ───┐
-  │                     │
-  │      X │ X │ O      │
-  │     ───┼───┼───     │
-  │      O │ O │ X      │
-  │     ───┼───┼───     │
-  │      X │ O │ X      │
-  │                     │
-  └─────────────────────┘
-```
+![imagem](http://www.image-share.com/upload/3188/265.jpg)
 
 ## Autor
 
