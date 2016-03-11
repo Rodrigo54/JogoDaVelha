@@ -3,9 +3,9 @@
  *
  * @author Rodrigo Alves Mesquita <rodrigo54mix@gmail.com>
  * @link http://www.github.com/rodrigo54
- * @version 0.4
+ * @version 1.0
  * @date 21 Nov 2015
- * @copyright 2015 by Rodrigo Alves Mesquita
+ * @copyright 2016 by Rodrigo Alves Mesquita
  *
  * @file JogoDaVelha.h
 **/

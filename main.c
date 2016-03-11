@@ -3,9 +3,9 @@
  *
  * @author Rodrigo Alves Mesquita <rodrigo54mix@gmail.com>
  * @link http://www.github.com/rodrigo54
- * @version 0.4
+ * @version 1.0
  * @date 21 Nov 2015
- * @copyright 2015 by Rodrigo Alves Mesquita
+ * @copyright 2016 by Rodrigo Alves Mesquita
  *
  * @file main.c
 **/
@@ -44,7 +44,7 @@ int main() {
     MostraJogo(velha);
     GG = ConfereJogo(velha, jogada);
     if (GG == 1) {
-      wprintf(L"\n\tO jogador %d venceu!\n\t", player+1);
+      wprintf(L"\n\tO jogador %d venceu! ", player+1);
       getch();
       return 0;
     }
@@ -53,7 +53,7 @@ int main() {
   }while(jogs < 9);
   system("clear || cls");
   MostraJogo(velha);
-  wprintf(L"\n\tO jogo terminou em empate.\n\t");
+  wprintf(L"\n\tO jogo terminou em empate! ");
   getch();
   return 0;
 }

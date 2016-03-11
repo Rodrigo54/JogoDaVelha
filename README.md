@@ -6,7 +6,7 @@ Jogo da Velha
 
 O Programa foi feito em **linguagem C** na IDE Code::Blocks
 
-![imagem](http://www.image-share.com/upload/3188/265.jpg)
+![imagem](http://s18.postimg.org/77320jaex/velha.jpg)
 
 ## Autor
 

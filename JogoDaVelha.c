@@ -3,9 +3,9 @@
  *
  * @author Rodrigo Alves Mesquita <rodrigo54mix@gmail.com>
  * @link http://www.github.com/rodrigo54
- * @version 0.4
+ * @version 1.0
  * @date 21 Nov 2015
- * @copyright 2015 by Rodrigo Alves Mesquita
+ * @copyright 2016 by Rodrigo Alves Mesquita
  *
  * @file JogoDaVelha.c
 **/
@@ -29,9 +29,9 @@ void MostraJogo(char vet[DIM][DIM])
   wprintf(L"\n\t ██║   ██║█████╗  ██║     ███████║███████║");
   wprintf(L"\n\t ╚██╗ ██╔╝██╔══╝  ██║     ██╔══██║██╔══██║");
   wprintf(L"\n\t  ╚████╔╝ ███████╗███████╗██║  ██║██║  ██║");
-  wprintf(L"\n\t   ╚═══╝  ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝");
+  wprintf(L"\n\t   ╚═══╝  ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝\n");
 
-  wprintf(L"\n\n\t\t┌─── JOGO DA VELHA ───┐");
+  wprintf(L"\n\t\t┌─── JOGO DA VELHA ───┐");
   wprintf(L"\n\t\t│                     │");
   wprintf(L"\n\t\t│      %c │ %c │ %c      │", vet[0][0], vet[0][1], vet[0][2]);
   wprintf(L"\n\t\t│     ───┼───┼───     │");
@@ -110,12 +110,10 @@ void InsereVelha(char vet[DIM][DIM], char item) {
   wprintf(L"\n\tDigite a Linha e a Coluna da jogada");
   wprintf(L"\n\tUse espaço para separar os valores: ");
   scanf("%d %d", &linha, &coluna);
-  if (vet[linha - 1][coluna - 1] != 'X' && vet[linha - 1][coluna - 1] != 'O')
+  while (vet[linha - 1][coluna - 1] == 'X' || vet[linha - 1][coluna - 1] == 'O')
   {
-    vet[linha - 1][coluna - 1] = item;
+    wprintf(L"\tEscolha outro lugar! ");
+    scanf("%d %d", &linha, &coluna);
   }
-  else{
-    wprintf(L"\n\tEscolha outro lugar! ");
-    InsereVelha(vet,item);
-  }
+  vet[linha - 1][coluna - 1] = item;
 }
