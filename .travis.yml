@@ -6,7 +6,7 @@ script: make all
 
 deploy:
   provider: releases
-  api_key: $GH_TOKEN
+  api_key: "$GH_TOKEN"
   file: 
     - bin/Release/JogoDaVelha.exe
   skip_cleanup: true
