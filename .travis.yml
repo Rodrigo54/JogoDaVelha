@@ -1,15 +1,4 @@
 os: windows
 language: c
-script: 
-  - choco install make
-  - make all
-
-deploy:
-  provider: releases
-  api_key: "$GH_TOKEN"
-  file: 
-    - bin/Release/JogoDaVelha.exe
-  skip_cleanup: true
-  on:
-    repo: Rodrigo54/JogoDaVelha
-    tags: true
+before_script: choco install make
+script: make all
