@@ -1,4 +1,5 @@
 os: windows
 language: c
-install: make
+before_install:
+  - choco install make
 script: make all
