@@ -1,12 +1,18 @@
 Jogo da Velha
 ===========
-[![Build Status](https://img.shields.io/badge/build-passed-brightgreen.svg)](http://github.com/Rodrigo54/)
-[![Version 0.3](https://img.shields.io/badge/version-0.3-blue.svg)](http://github.com/Rodrigo54/)
+[![Build Status](https://img.shields.io/travis/com/Rodrigo54/JogoDaVelha/master.svg)](https://travis-ci.com/Rodrigo54/JogoDaVelha)
+[![Version 0.3](https://img.shields.io/github/release/Rodrigo54/JogoDaVelha.svg)](https://github.com/Rodrigo54/JogoDaVelha/releases)
 [![requirement](https://img.shields.io/badge/IDE-Code%3A%3ABlocks-orange.svg)](http://www.codeblocks.org/downloads)
 
-O Programa foi feito em **linguagem C** na IDE Code::Blocks
+![Imgur](https://i.imgur.com/JxEevxe.gif)
 
-![imagem](http://s18.postimg.org/77320jaex/velha.jpg)
+## Sobre o Aplicativo
+
+* Feito em Linguagem  C
+* Plataforma Windows
+* IDE Code::Blocks
+* Makefile gerado com [cbp2make](https://sourceforge.net/projects/cbp2make/) saiba mais [aqui](https://stackoverflow.com/questions/26386335/codeblocks-build-from-bash)
+
 
 ## Autor
 
