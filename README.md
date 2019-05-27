@@ -1,5 +1,6 @@
 Jogo da Velha
 ===========
+[![Build Status](https://dev.azure.com/rodrigo254mix/JogoDaVelha/_apis/build/status/Rodrigo54.JogoDaVelha?branchName=master)](https://dev.azure.com/rodrigo254mix/JogoDaVelha/_build/latest?definitionId=2&branchName=master)
 [![Build Status](https://img.shields.io/travis/com/Rodrigo54/JogoDaVelha/master.svg)](https://travis-ci.com/Rodrigo54/JogoDaVelha)
 [![tag](https://img.shields.io/github/tag/Rodrigo54/JogoDaVelha.svg)](https://github.com/Rodrigo54/JogoDaVelha/releases)
 [![requirement](https://img.shields.io/badge/IDE-Code%3A%3ABlocks-orange.svg)](http://www.codeblocks.org/downloads)
