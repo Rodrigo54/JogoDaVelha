@@ -12,15 +12,18 @@ pool:
 steps:
 - script: |
     make all
-  displayName: 'make'
+  displayName: 'Build'
+  
 - task: CopyFiles@2
+  displayName: 'Copy'
   inputs:
     contents: 'bin\Release\*.exe'
     targetFolder: $(Build.ArtifactStagingDirectory)
+    
 - task: GithubRelease@0 
   displayName: 'Create GitHub Release'      
   inputs:
-    githubConnection: Rodrigo54
+    gitHubConnection: Rodrigo54
     repositoryName: Rodrigo54/JogoDaVelha
     tagSource: manual
     tag: $(Build.BuildNumber)      
